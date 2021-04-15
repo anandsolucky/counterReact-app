@@ -39,12 +39,14 @@ class Counters extends Component {
   };
 
   addLblCartCount = {
-    fontSize: "40px%",
-    background: "#ff0000",
+    fontSize: "16px",
+    background: "#bd2130",
     color: "#fff",
-    padding: "0 5px",
+    padding: "3px 4px",
     verticalAlign: "top",
-    marginLeft: "-10px",
+    position: "absolute",
+    right: "30px",
+    top: "10px",
   };
   render() {
     return (
@@ -59,10 +61,19 @@ class Counters extends Component {
           {this.state.uniqueItems.length}
         </button> */}
 
-        <i class="fa" style={{ fontSize: "44px", marginLeft: "20px" }}>
+        <i
+          class="fa"
+          style={{
+            fontSize: "44px",
+            marginLeft: "-20px",
+            position: "absolute",
+            right: "33px",
+            top: "15px",
+          }}
+        >
           &#xf07a;
         </i>
-        <span className="badge badge-warning" id="lblCartCount">
+        <span className="badge badge-warning" style={this.addLblCartCount}>
           {this.state.uniqueItems.length}
         </span>
         <br />
